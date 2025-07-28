@@ -115,3 +115,73 @@ Create an ADR in `.dev_diary/adr/` when making decisions that:
 - Future developers might question
 
 ADRs document the "why" behind important technical decisions. See `.dev_diary/adr/README.md` for details.
+
+## AI Agents for Parallel Development
+
+This project includes specialized AI agents in `.claude/agents/` that enable parallel development workflows. Use the `/agents` command to work with them.
+
+### Available Agents
+
+#### 🎯 Orchestrator (`orchestrator.md`)
+Coordinates parallel development workflows and manages multi-agent collaboration. Use when:
+- Breaking down complex features into parallel tasks
+- Coordinating work across multiple agents
+- Managing integration of completed work
+- Tracking overall project progress
+
+#### 📋 Task Distributor (`task-distributor.md`)
+Analyzes requirements and intelligently distributes tasks to specialized agents. Use when:
+- Starting a new feature that needs task breakdown
+- Identifying which agents should handle specific work
+- Optimizing for parallel execution
+- Managing task dependencies
+
+#### 🧪 Tester (`tester.md`)
+Testing and QA specialist. Use when:
+- Writing test cases
+- Implementing test automation
+- Performing quality assurance
+- Validating functionality
+
+#### 👁️ Reviewer (`reviewer.md`)
+Code review specialist. Use when:
+- Reviewing code quality
+- Checking security practices
+- Validating performance
+- Ensuring best practices
+
+### Using Agents
+
+1. **Single Agent**: Use `/agents` and select a specific agent for focused tasks
+2. **Parallel Development**: Use the orchestrator to coordinate multiple agents
+3. **Task Distribution**: Let the task-distributor analyze and assign work
+
+### Example Workflows
+
+#### Complex Feature Development
+```
+1. Use orchestrator to receive requirements
+2. Orchestrator works with task-distributor to break down work
+3. Multiple agents work on tasks in parallel
+4. Tester validates functionality
+5. Reviewer ensures code quality
+6. Orchestrator integrates completed work
+```
+
+#### Testing Workflow
+```
+1. Use tester agent to design test strategy
+2. Implement unit and integration tests
+3. Run tests and analyze coverage
+4. Report findings and suggestions
+```
+
+#### Code Review Process
+```
+1. Use reviewer agent after implementation
+2. Check for best practices and security
+3. Suggest improvements
+4. Validate fixes
+```
+
+These agents are designed to work together efficiently, enabling true parallel development while maintaining code quality and consistency.

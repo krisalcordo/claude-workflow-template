@@ -27,11 +27,17 @@ cd my-project
 ```
 template/
 ├── CLAUDE.md              # Main guidance file for Claude with interactive setup
-└── .dev_diary/           # Development documentation system
-    ├── README.md         # How to use the diary
-    ├── template.md       # Entry template
-    └── adr/              # Architecture Decision Records
-        └── README.md     # ADR guide and template
+├── .dev_diary/           # Development documentation system
+│   ├── README.md         # How to use the diary
+│   ├── template.md       # Entry template
+│   └── adr/              # Architecture Decision Records
+│       └── README.md     # ADR guide and template
+└── .claude/              # Claude Code configuration
+    └── agents/           # AI agents for parallel development
+        ├── orchestrator.md     # Coordinates multi-agent workflows
+        ├── task-distributor.md # Analyzes and distributes tasks
+        ├── tester.md          # Testing and QA
+        └── reviewer.md        # Code review and quality
 ```
 
 ## Features
@@ -57,6 +63,15 @@ Document important decisions with:
 - Historical record of "why" decisions were made
 - Template for consistent documentation
 
+### 🚀 AI Agents for Parallel Development
+Essential agents that enable efficient development workflows:
+- **Orchestrator**: Coordinates multi-agent collaboration and tracks progress
+- **Task Distributor**: Intelligently breaks down and assigns work
+- **Tester**: Comprehensive testing and quality assurance
+- **Reviewer**: Code review and best practices enforcement
+- **Parallel Execution**: Multiple agents working simultaneously
+- **Universal Application**: Works with any programming language or framework
+
 ## How It Works
 
 1. **Copy the template** to your project using degit or git clone
@@ -81,6 +96,8 @@ The template creates a sustainable workflow where both you and Claude can unders
 - **Team Collaboration**: New developers (human or AI) can quickly understand the codebase
 - **Reduced Context Switching**: All project knowledge in one place
 - **Future-Proof**: Works with any programming language or framework
+- **Parallel Development**: Multiple AI agents can work on different aspects simultaneously
+- **Quality Focus**: Built-in testing and review agents ensure high-quality output
 
 ## Contributing
 
