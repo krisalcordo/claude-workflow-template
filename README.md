@@ -1,6 +1,6 @@
 # Claude Template
 
-A minimal, generic template for setting up AI-assisted development workflows with Claude Code.
+A powerful template for AI-assisted development with Claude Code, featuring built-in development diary and Architecture Decision Records (ADRs) for maintaining project knowledge.
 
 ## Quick Start
 
@@ -19,39 +19,52 @@ cd my-project
 
 ### Manual Setup
 1. Copy the `template` directory contents to your project
-2. Edit `CLAUDE.md` with your project-specific information
-3. Remove any sections that don't apply
+2. Open the project with Claude Code
+3. Claude will guide you through the interactive setup process
 
 ## What's Included
 
 ```
 template/
-├── CLAUDE.md              # Main guidance file for Claude
-└── .dev_diary/           # Development documentation
+├── CLAUDE.md              # Main guidance file for Claude with interactive setup
+└── .dev_diary/           # Development documentation system
     ├── README.md         # How to use the diary
-    └── template.md       # Entry template
+    ├── template.md       # Entry template
+    └── adr/              # Architecture Decision Records
+        └── README.md     # ADR guide and template
 ```
 
-## CLAUDE.md Sections
+## Features
 
-- **Project Overview**: High-level description and purpose
-- **Development Commands**: Essential commands Claude needs
-- **Project Structure**: Key directories and organization  
-- **Key Development Patterns**: Non-obvious conventions
-- **Environment Configuration**: Dependencies and setup
-- **Testing Approach**: How tests work in your project
-- **Common Tasks**: Step-by-step guides
-- **Important Notes**: Critical information
+### 🤖 Interactive Setup
+When you first use the template, Claude will:
+- Ask about your project (name, purpose, commands)
+- Help personalize all template sections
+- Confirm before removing any template content
+- Set up your project-specific documentation
 
-## Development Diary
+### 📓 Development Diary
+Track your development journey with:
+- Structured templates for documenting work
+- Investigation processes and failed attempts
+- Implementation details and context
+- Lessons learned for future reference
 
-The `.dev_diary` directory helps track:
-- Complex implementations
-- Investigation processes
-- Decisions and rationale
-- What didn't work and why
+### 🏛️ Architecture Decision Records (ADRs)
+Document important decisions with:
+- Structured format for architectural choices
+- Context, consequences, and alternatives
+- Historical record of "why" decisions were made
+- Template for consistent documentation
 
-Use it for significant work that future developers (or Claude) might need to understand.
+## How It Works
+
+1. **Copy the template** to your project using degit or git clone
+2. **Open with Claude Code** - Claude will notice the setup instructions
+3. **Answer Claude's questions** about your project
+4. **Start developing** with AI assistance and proper documentation
+
+The template creates a sustainable workflow where both you and Claude can understand the project's evolution over time.
 
 ## Best Practices
 
@@ -61,11 +74,13 @@ Use it for significant work that future developers (or Claude) might need to und
 4. **Document Patterns**: Focus on non-obvious project conventions
 5. **Include Examples**: Real command examples work better than descriptions
 
-## When to Use Each Part
+## Why Use This Template?
 
-- **Just CLAUDE.md**: Most projects (start here)
-- **Add dev_diary**: Long-term projects with complex history
-- **Expand sections**: As project complexity grows
+- **Better AI Assistance**: Claude understands your project structure and conventions
+- **Knowledge Preservation**: Development decisions and context are never lost
+- **Team Collaboration**: New developers (human or AI) can quickly understand the codebase
+- **Reduced Context Switching**: All project knowledge in one place
+- **Future-Proof**: Works with any programming language or framework
 
 ## Contributing
 
