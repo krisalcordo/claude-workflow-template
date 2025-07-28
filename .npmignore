@@ -1,0 +1,14 @@
+# Development files
+.git
+.gitignore
+.DS_Store
+
+# Documentation that's not part of the template
+CLAUDE.md
+README.md
+
+# Only include template/ and bin/ directories
+/*
+!/template/
+!/bin/
+!/package.json

@@ -1,0 +1,29 @@
+{
+  "name": "claude-workflow-template",
+  "version": "1.0.0",
+  "description": "A minimal template for setting up AI-assisted development workflows with Claude Code",
+  "keywords": ["claude", "ai", "development", "template", "workflow"],
+  "author": "krisalcordo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krisalcordo/claude-workflow-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krisalcordo/claude-workflow-template/issues"
+  },
+  "homepage": "https://github.com/krisalcordo/claude-workflow-template#readme",
+  "files": [
+    "template/**/*",
+    "bin/**/*"
+  ],
+  "bin": {
+    "create-claude-project": "./bin/create-claude-project.js"
+  },
+  "scripts": {
+    "postinstall": "node bin/create-claude-project.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
