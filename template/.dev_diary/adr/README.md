@@ -1,51 +1,69 @@
-# Architecture Decision Records
+# Architecture Decision Records (ADRs)
 
-This directory contains Architecture Decision Records (ADRs) for the project.
+This directory contains Architecture Decision Records (ADRs) - documents that capture important architectural decisions made during the project's development.
 
-## What are ADRs?
+## What is an ADR?
 
-ADRs are short documents that capture important architectural decisions made during the development of a project. Each ADR describes a single decision, the context in which it was made, and its consequences.
+An ADR is a document that captures an important architectural decision made along with its context and consequences.
 
 ## When to write an ADR
 
-Write an ADR when you make a decision that:
-- Affects the overall structure of the system
-- Would be expensive to change later
-- Involves choosing between multiple viable options
-- Future developers (including yourself) might question
+Write an ADR when you:
+- Choose between competing architectural approaches
+- Make decisions that will be expensive to change later
+- Select technologies, frameworks, or patterns
+- Establish conventions that the whole team should follow
+- Make trade-offs between different quality attributes (performance vs. maintainability, etc.)
+
+## ADR Format
+
+Use this template for new ADRs:
+
+```markdown
+# [ADR-NNNN] Title
+
+**Date**: YYYY-MM-DD  
+**Status**: Proposed | Accepted | Deprecated | Superseded  
+**Superseded by**: [ADR-NNNN] (if applicable)
+
+## Context
+
+What is the issue that we're seeing that is motivating this decision?
+
+## Decision
+
+What is the decision that we're making?
+
+## Consequences
+
+What becomes easier or more difficult as a result of this decision?
+
+### Positive
+- 
+- 
+
+### Negative
+- 
+- 
+
+## Alternatives Considered
+
+What other options did we consider and why didn't we choose them?
+```
+
+## Naming Convention
+
+ADRs should be named: `ADR-NNNN-brief-description.md`
 
 Examples:
-- Choosing a framework or major library
-- Deciding on a data storage approach
-- Selecting an authentication strategy
-- Establishing coding patterns or conventions
-- Making performance vs. simplicity trade-offs
+- `ADR-0001-use-react-for-frontend.md`
+- `ADR-0002-microservices-architecture.md`
+- `ADR-0003-postgresql-for-persistence.md`
 
-## ADR vs Dev Diary
+## Best Practices
 
-- **Dev Diary**: Day-to-day development narrative, debugging sessions, implementation details
-- **ADRs**: Long-lasting architectural decisions and their rationale
-
-## How to write an ADR
-
-1. Copy `template.md` to a new file named `NNNN-title-with-dashes.md`
-   - NNNN is a 4-digit number (0001, 0002, etc.)
-   - Numbers are never reused, even if an ADR is deprecated
-
-2. Fill in the sections:
-   - **Status**: proposed, accepted, deprecated, superseded
-   - **Context**: What is the issue that we're seeing that is motivating this decision?
-   - **Decision**: What is the change that we're proposing and/or doing?
-   - **Consequences**: What becomes easier or more difficult to do because of this change?
-
-3. Keep it short - 1-2 pages maximum
-
-## Updating ADRs
-
-- ADRs are immutable once accepted
-- To change a decision, create a new ADR that supersedes the old one
-- Update the old ADR's status to "Superseded by ADR-NNNN"
-
-## Examples
-
-See `0001-record-architecture-decisions.md` for the first ADR explaining why we use ADRs.
+1. **Keep ADRs short** - Aim for 1-2 pages max
+2. **Use simple language** - Avoid unnecessary jargon
+3. **Be specific** - Include concrete examples where helpful
+4. **Date everything** - Context changes over time
+5. **Don't delete ADRs** - Mark them as deprecated or superseded instead

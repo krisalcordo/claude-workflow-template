@@ -2,6 +2,29 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## 🚀 First Time Setup
+
+**IMPORTANT: If this is a new project created from the claude-template, please help me set it up by:**
+
+1. **Asking me these questions:**
+   - What is your project name?
+   - What does this project do? (brief description)
+   - What are the main development commands? (build, test, dev, lint)
+   - What is your project structure?
+   - Are there any specific patterns or conventions I should know about?
+
+2. **Then update this file by:**
+   - Replacing all `[placeholder]` sections with my actual project information
+   - Filling in real commands, paths, and descriptions
+   - Adding any project-specific guidance
+
+3. **After setup is complete:**
+   - Ask me: "Should I remove the First Time Setup section now that we're done?"
+   - Only remove it if I confirm
+   - The .dev_diary feature should ALWAYS be kept - it's the main feature of this template
+
+Note: This template includes a development diary system in `.dev_diary/` for tracking implementation details and decisions. This is a core feature and should be preserved.
+
 ## Project Overview
 
 [Brief description of what this project does, its main purpose, and key technical components]
