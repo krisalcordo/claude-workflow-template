@@ -4,53 +4,39 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Claude workflow template repository that provides comprehensive documentation patterns for AI-assisted development. It serves as a reference implementation for setting up effective Claude Code workflows in other projects.
+This is the Claude Template repository - a minimal, generic template for setting up AI-assisted development workflows with Claude Code. It provides a repeatable structure for documenting projects to maximize Claude's effectiveness.
 
 ## Repository Structure
 
-The repository contains a single comprehensive template file:
-- `CLAUDE_TEMPLATE.md`: Master template containing patterns for CLAUDE.md files, development diaries, and AI agent orchestration
+```
+claude-template/
+├── README.md              # Usage instructions
+├── CLAUDE.md             # This file
+└── template/             # The actual template files
+    ├── CLAUDE.md         # Template for project guidance
+    └── .dev_diary/       # Development diary structure
+        ├── README.md     # Diary usage guide
+        └── template.md   # Entry template
+```
 
-## Key Template Components
+## Purpose
 
-### 1. CLAUDE.md Template Structure
-The template provides a standard format for project guidance files including:
-- Project overview and architecture
-- Development commands documentation
-- Key development patterns
-- Environment configuration
-- Development diary practices
+This repository helps developers:
+- Quickly set up Claude-friendly documentation
+- Establish consistent AI-assisted workflows
+- Create maintainable project knowledge bases
+- Track development decisions and history
 
-### 2. Development Diary System
-Located in `.dev_diary/`, this system tracks:
-- User requests and prompts
-- Investigation findings
-- Implementation attempts (including failures)
-- Decision points and reasoning
-- Test results and outcomes
+## Distribution
 
-### 3. AI Agent Patterns (Advanced)
-For complex multi-component projects:
-- Backend Agent: Handles server-side tasks
-- Frontend Agent: Manages UI components
-- Mobile Agent: Handles platform-specific code
-- Architect Agent: Coordinates cross-component features
+Users can copy the template using:
+- `npx degit username/claude-template/template my-project`
+- Git clone and manual copy
+- Direct download
 
-## Using This Template
+## Maintenance
 
-To implement this template in a new project:
-
-1. Copy relevant sections from `CLAUDE_TEMPLATE.md`
-2. Customize based on project complexity:
-   - Simple projects: Basic CLAUDE.md only
-   - Medium projects: CLAUDE.md + dev_diary
-   - Complex projects: Full implementation including agent patterns
-
-3. Adapt to your specific tech stack and workflow needs
-
-## Template Maintenance
-
-This template should be updated when:
-- New best practices emerge
-- Common patterns are identified across projects
-- Claude Code capabilities expand
+Update this template when:
+- Better documentation patterns emerge
+- Claude Code gains new capabilities
+- User feedback suggests improvements

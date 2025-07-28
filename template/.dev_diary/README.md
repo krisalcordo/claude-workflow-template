@@ -1,78 +1,49 @@
 # Development Diary
 
-This directory contains documentation of significant development work, investigations, and decisions made during the project.
-
-## Purpose
-
-- Track the evolution of features and fixes
-- Document investigation processes and findings  
-- Record decisions and their rationale
-- Create searchable history for debugging
-- Preserve knowledge about what was tried (including what didn't work)
-
-## Dev Diary vs Architecture Decision Records
-
-This directory contains two types of documentation:
-
-### Development Diary (`.dev_diary/*.md`)
-- Day-to-day development narrative
-- Implementation details and debugging sessions
-- Feature development progress
-- Temporary problems and their solutions
-- "What I did and how I did it"
-
-### Architecture Decision Records (`.dev_diary/adr/*.md`)
-- Long-lasting architectural decisions
-- Technology and pattern choices
-- Trade-offs and their rationale
-- Decisions that affect the whole system
-- "Why we chose X over Y"
-
-Use the dev diary for development journey; use ADRs for architectural choices.
-
-## Usage
-
-1. Create a new diary entry when starting significant work
-2. Use the template.md as a starting point
-3. Name files as: `YYYY-MM-DD_brief_description.md`
-4. Update entries as work progresses
-5. Keep entries factual and searchable
-6. Add relevant tags for easy discovery
+This directory contains development notes and implementation details that help future developers (and Claude) understand the evolution of this project.
 
 ## When to Create an Entry
 
-- Feature implementations
-- Bug investigations (especially complex ones)
-- Performance optimizations  
-- Architectural changes
-- Failed attempts that provide learning value
+Create a diary entry when:
+- Implementing complex features that require multiple iterations
+- Investigating bugs or performance issues
+- Making architectural decisions
+- Trying approaches that don't work (document why they failed)
+- Solving problems in non-obvious ways
 
-## Tips
+## How to Use
 
-- Include exact error messages for searchability
-- Document "why" not just "what"
-- Link related entries
-- Keep a balance - not every change needs an entry
+1. Copy `template.md` to a new file with format: `YYYY-MM-DD-description.md`
+2. Fill in the sections that apply to your work
+3. Delete sections you don't need
+4. Be specific about what you tried and why
 
-## Tagging System
+## Entry Naming
 
-Use hashtags to categorize entries for easy searching:
-
-### Common Tags
-- **Type**: #feature #bugfix #hotfix #refactor #performance #security #investigation
-- **Area**: #frontend #backend #database #api #infrastructure #testing #documentation  
-- **Tech**: #react #nodejs #python #docker #kubernetes (project-specific)
-- **Status**: #solved #workaround #blocked #needsreview
-- **Difficulty**: #complex #edgecase #dataissue
-
-### Searching
-```bash
-# Find all performance-related entries
-grep -l "#performance" .dev_diary/*.md
-
-# Find all database investigations  
-grep -l "#database.*#investigation" .dev_diary/*.md
-
-# Find all blocked items
-grep -l "#blocked" .dev_diary/*.md
 ```
+YYYY-MM-DD-brief-description.md
+```
+
+Examples:
+- `2024-03-15-auth-system-design.md`
+- `2024-03-16-websocket-debugging.md`
+- `2024-03-17-performance-optimization.md`
+
+## Best Practices
+
+- **Be Honest**: Document what didn't work and why
+- **Include Context**: Explain why decisions were made
+- **Show Code**: Include relevant code snippets
+- **Link Resources**: Reference helpful articles or docs
+- **Think Future**: Write for someone (or Claude) reading this months later
+
+## What Makes a Good Entry
+
+Good entries include:
+- Clear problem statement
+- Approaches attempted (even failed ones)
+- Final solution with reasoning
+- Lessons learned
+- Future considerations
+
+Remember: The goal is to capture knowledge that would otherwise be lost, making the codebase more maintainable and understandable.
