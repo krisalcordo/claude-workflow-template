@@ -4,34 +4,28 @@ A powerful template for AI-assisted development with Claude Code, featuring buil
 
 ## Quick Start
 
-### For New Projects
+### Installation (Works for both new and existing projects!)
 
-#### Using degit (Recommended)
 ```bash
-npx degit krisalcordo/claude-workflow-template/template my-project
-cd my-project
+# For a new project
+npx create-claude-workflow my-project
+
+# For an existing project
+cd your-project
+npx create-claude-workflow
 ```
 
-#### Using git clone
-```bash
-git clone https://github.com/krisalcordo/claude-workflow-template.git
-cp -r claude-workflow-template/template/* my-project/
-cd my-project
-```
+The interactive CLI will:
+- ✨ Detect if you're in a new or existing project
+- 🔍 Check for existing Claude files
+- 📋 Let you choose which components to add
+- ⚡ Handle conflicts intelligently
+- 🎯 Set up everything automatically
 
-### For Existing Projects
-
-#### Using npm (Recommended)
-```bash
-cd your-existing-project
-npm install --save-dev claude-workflow-template
-```
-This will automatically copy the Claude workflow files to your project.
-
-#### Manual Setup
-1. Copy the `template` directory contents to your project
-2. Open the project with Claude Code
-3. Claude will guide you through the interactive setup process
+### Manual Setup (Alternative)
+1. Clone this repository
+2. Copy the `template` directory contents to your project
+3. Customize the files for your needs
 
 ## What's Included
 
